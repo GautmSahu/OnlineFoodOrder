@@ -12,11 +12,11 @@
             {% csrf_token %}
             <div class="row">
                 <div class="col">
-                    <input type="text" name="state" id="state" class="form-control" placeholder="State Name" value="{{ state }}">
+                    <input type="text" required name="state" id="state" class="form-control" placeholder="State Name" value="{{ state }}">
                 </div>
                 <div class="col">
                     <div class="custom-file">
-                    <input type="file" name="photo" class="custom-file-input" value="{{ photo }}" id="photo" aria-describedby="inputGroupFileAddon01">
+                    <input type="file" required name="photo" class="custom-file-input" value="{{ photo }}" id="photo" aria-describedby="inputGroupFileAddon01">
                     <label class="custom-file-label" for="inputGroupFile01">{% if photo %}{{ photo.name }}{% else %}Choose Image{% endif %}</label>
                     </div>
                 </div>

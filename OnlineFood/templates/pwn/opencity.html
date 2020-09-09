@@ -13,7 +13,7 @@
                 <div class="col">
                 <div class="form-group">
                     Select State :
-                    <select class="form-control" name="state" id="exampleFormControlSelect1">
+                    <select required class="form-control" name="state" id="exampleFormControlSelect1">
 
                         {% for st in state %}
                             {% if state_name == st %}
@@ -25,10 +25,10 @@
                     </select>
                 </div>
                     <div  class="form-group">
-                        <input type="text" name="city" id="city" class="form-control" placeholder="City Name" value="{{ city }}">
+                        <input type="text" required name="city" id="city" class="form-control" placeholder="City Name" value="{{ city }}">
                     </div>
                     <div class="custom-file">
-                    <input type="file" name="photo" class="custom-file-input" value="{{ photo }}" id="photo" aria-describedby="inputGroupFileAddon01">
+                    <input type="file" required name="photo" class="custom-file-input" value="{{ photo }}" id="photo" aria-describedby="inputGroupFileAddon01">
                     <label class="custom-file-label" for="inputGroupFile01">{% if photo %}{{ photo.name }}{% else %}Choose Image{% endif %}</label>
                     </div><br>
                 <br><button type="submit" class="btn btn-success">Add</button>
